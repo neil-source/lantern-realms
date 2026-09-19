@@ -1,0 +1,11 @@
+{
+  "name": "lantern-realms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A compact browser action RPG built from the Town Raid pixel-art collection.",
+  "scripts": {
+    "start": "node server.cjs",
+    "test": "node --test test.cjs"
+  },
+  "engines": { "node": ">=18" }
+}

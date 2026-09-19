@@ -1,0 +1,22 @@
+:root{color-scheme:dark;--ink:#fff9dc;--gold:#ffd45c;--blue:#39c6e8;--edge:#201633;--panel:#151429ee}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#080b16;font-family:Impact,"Arial Black",system-ui,sans-serif;color:var(--ink)}
+body{display:grid;place-items:center}
+#shell{position:relative;width:100vw;height:100vh;overflow:hidden;background:#111}
+canvas{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;background:#143323}
+.panel{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;background:radial-gradient(circle at 50% 38%,#31506ddd 0 18%,#11152cf2 52%,#080913 100%);z-index:20;padding:24px}
+.panel.hidden{display:none}
+.crest{width:104px;height:104px;display:grid;place-items:center;border:7px solid #fff2b3;background:#e08a24;box-shadow:0 0 0 7px #3d2032,0 15px 0 #070a12;color:#fff7bd;font-size:65px;transform:rotate(45deg)}
+.crest::first-letter{transform:rotate(-45deg)}
+h1,h2,p{margin:0;text-shadow:0 4px 0 #161125,3px 0 0 #161125,-3px 0 0 #161125}
+h1{font-size:clamp(42px,8vw,92px);letter-spacing:4px;color:#ffe06a}
+h2{font-size:clamp(34px,5vw,60px);color:#ffe06a}
+p{font:700 clamp(16px,2vw,25px)/1.35 system-ui,sans-serif;max-width:700px}
+button{min-width:270px;padding:16px 25px;border:5px solid #fff4ba;border-radius:7px;background:#e88325;color:white;box-shadow:0 7px 0 #6d2d25,0 0 0 4px #21162d;font:900 22px/1 Impact,"Arial Black",sans-serif;letter-spacing:1.5px;cursor:pointer;text-shadow:0 3px #582326}
+button:hover:not(:disabled),button:focus-visible:not(:disabled){filter:brightness(1.2);transform:translateY(-2px)}
+button:disabled{filter:saturate(.25);cursor:wait}
+.loadbar{width:min(430px,80vw);height:22px;border:4px solid white;background:#1e2340;box-shadow:0 4px #090b15;padding:3px}
+.loadbar i{display:block;width:0;height:100%;background:linear-gradient(90deg,#34d08b,#ffd34b);transition:width .18s}
+#announce{position:absolute;top:112px;left:50%;transform:translate(-50%,-20px);z-index:10;opacity:0;pointer-events:none;min-width:260px;max-width:75%;padding:11px 22px;border:4px solid #fff4c2;border-radius:8px;background:#1a1730eF;text-align:center;font:900 21px/1.15 system-ui,sans-serif;text-shadow:0 2px #171126;transition:.22s}
+#announce.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){#announce{top:90px;font-size:16px}.crest{width:76px;height:76px;font-size:45px}button{font-size:18px;min-width:220px}}

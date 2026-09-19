@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Lantern Realms</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='20' height='20' rx='2' transform='rotate(45 16 16)' fill='%23ed9628' stroke='%23fff0a0' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="shell">
+    <canvas id="game" width="1280" height="720" aria-label="Lantern Realms game"></canvas>
+    <section id="loading" class="panel">
+      <div class="crest">✦</div>
+      <h1>LANTERN REALMS</h1>
+      <p>A new adventure made from your pixel-art collection</p>
+      <button id="play" disabled>LOADING THE REALM…</button>
+      <div class="loadbar"><i id="loadfill"></i></div>
+    </section>
+    <section id="pause" class="panel hidden">
+      <h2>ADVENTURE PAUSED</h2>
+      <button data-action="resume">CONTINUE</button>
+      <button data-action="save">SAVE GAME</button>
+      <button data-action="restart">NEW ADVENTURE</button>
+    </section>
+    <div id="announce" aria-live="polite"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

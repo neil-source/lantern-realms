@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: lantern-realms
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.cjs
+    healthCheckPath: /health
+    autoDeployTrigger: commit
